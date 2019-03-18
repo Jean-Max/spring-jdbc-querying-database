@@ -1,7 +1,7 @@
-package com.viseo.dao.impl.complete;
+package com.viseo.formation.dao.impl.complete;
 
-import com.viseo.dao.MusicRowCallBackHandlerDAO;
-import com.viseo.dao.utils.MusicDAOUtils;
+import com.viseo.formation.dao.MusicRowCallBackHandlerDAO;
+import com.viseo.formation.dao.utils.MusicDAOUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
@@ -38,7 +38,4 @@ public class MusicRowCallBackHandlerDAOImpl implements MusicRowCallBackHandlerDA
                 }
         );
     }
-
-
-
 }

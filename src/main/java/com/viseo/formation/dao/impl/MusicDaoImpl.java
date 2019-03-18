@@ -1,11 +1,14 @@
-package com.viseo.dao.impl;
+package com.viseo.formation.dao.impl;
 
-import com.viseo.dao.MusicDao;
-import com.viseo.dao.MusicResultSetExtractorDAO;
-import com.viseo.dao.MusicRowCallBackHandlerDAO;
-import com.viseo.dao.MusicRowMapperDAO;
-import com.viseo.dao.utils.MusicDAOUtils;
-import com.viseo.model.Music;
+import com.viseo.formation.dao.MusicDao;
+import com.viseo.formation.dao.MusicResultSetExtractorDAO;
+import com.viseo.formation.dao.MusicRowCallBackHandlerDAO;
+import com.viseo.formation.dao.MusicRowMapperDAO;
+import com.viseo.formation.dao.impl.todo.MusicResultSetExtractorDAOImpl;
+import com.viseo.formation.dao.impl.todo.MusicRowCallBackHandlerDAOImpl;
+import com.viseo.formation.dao.impl.todo.MusicRowMapperDAOImpl;
+import com.viseo.formation.dao.utils.MusicDAOUtils;
+import com.viseo.formation.model.Music;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -27,17 +30,17 @@ public class MusicDaoImpl implements MusicDao {
 	private MusicResultSetExtractorDAO musicResultSetExtractorDAO;
 
 	@Autowired
-	public void setMusicRowMapperDAO(MusicRowMapperDAO musicRowMapperDAO){
+	public void setMusicRowMapperDAO(MusicRowMapperDAOImpl musicRowMapperDAO){
 		this.musicRowMapperDAO = musicRowMapperDAO;
 	}
 
 	@Autowired
-	public void setMusicResultSetExtractorDAO(MusicResultSetExtractorDAO musicResultSetExtractorDAO) {
+	public void setMusicResultSetExtractorDAO(MusicResultSetExtractorDAOImpl musicResultSetExtractorDAO) {
 		this.musicResultSetExtractorDAO = musicResultSetExtractorDAO;
 	}
 
 	@Autowired
-	public void setMusicRowCallBackHandlerDAO(MusicRowCallBackHandlerDAO musicRowCallBackHandlerDAO) {
+	public void setMusicRowCallBackHandlerDAO(MusicRowCallBackHandlerDAOImpl musicRowCallBackHandlerDAO) {
 		this.musicRowCallBackHandlerDAO = musicRowCallBackHandlerDAO;
 	}
 

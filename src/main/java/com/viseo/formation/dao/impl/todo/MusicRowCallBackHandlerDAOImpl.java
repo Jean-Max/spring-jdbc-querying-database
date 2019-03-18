@@ -1,15 +1,9 @@
-package com.viseo.dao.impl.initial;
+package com.viseo.formation.dao.impl.todo;
 
-import com.viseo.dao.MusicRowCallBackHandlerDAO;
-import com.viseo.dao.utils.MusicDAOUtils;
+import com.viseo.formation.dao.MusicRowCallBackHandlerDAO;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Component

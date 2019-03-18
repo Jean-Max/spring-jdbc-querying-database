@@ -1,4 +1,4 @@
-package com.viseo.dao;
+package com.viseo.formation.dao;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 

@@ -1,8 +1,8 @@
-package com.viseo.dao.impl.complete;
+package com.viseo.formation.dao.impl.complete;
 
-import com.viseo.dao.MusicResultSetExtractorDAO;
-import com.viseo.dao.utils.MusicDAOUtils;
-import com.viseo.model.Music;
+import com.viseo.formation.dao.MusicResultSetExtractorDAO;
+import com.viseo.formation.dao.utils.MusicDAOUtils;
+import com.viseo.formation.model.Music;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;

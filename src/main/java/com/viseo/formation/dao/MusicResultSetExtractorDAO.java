@@ -1,6 +1,6 @@
-package com.viseo.dao;
+package com.viseo.formation.dao;
 
-import com.viseo.model.Music;
+import com.viseo.formation.model.Music;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;

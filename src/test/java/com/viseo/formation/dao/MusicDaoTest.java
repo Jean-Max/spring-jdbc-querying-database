@@ -1,12 +1,12 @@
-package com.viseo.dao;
+package com.viseo.formation.dao;
 
-import com.viseo.dao.impl.MusicDaoImpl;
-import com.viseo.dao.impl.complete.MusicResultSetExtractorDAOImpl;
-import com.viseo.dao.impl.complete.MusicRowCallBackHandlerDAOImpl;
-import com.viseo.dao.impl.complete.MusicRowMapperDAOImpl;
-import com.viseo.dao.utils.MusicDAOUtils;
-import com.viseo.dao.utils.MusicTypes;
-import com.viseo.model.Music;
+import com.viseo.formation.dao.impl.MusicDaoImpl;
+import com.viseo.formation.dao.impl.todo.MusicResultSetExtractorDAOImpl;
+import com.viseo.formation.dao.impl.todo.MusicRowCallBackHandlerDAOImpl;
+import com.viseo.formation.dao.impl.todo.MusicRowMapperDAOImpl;
+import com.viseo.formation.dao.utils.MusicDAOUtils;
+import com.viseo.formation.dao.utils.MusicTypes;
+import com.viseo.formation.model.Music;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -28,9 +28,9 @@ public class MusicDaoTest {
 
     MusicDaoImpl musicDao;
     JdbcTemplate jdbcTemplate;
-    MusicRowMapperDAO musicRowMapperDAO = new MusicRowMapperDAOImpl();
-    MusicRowCallBackHandlerDAO musicRowCallBackHandlerDAO = new MusicRowCallBackHandlerDAOImpl();
-    MusicResultSetExtractorDAO musicResultSetExtractorDAO = new MusicResultSetExtractorDAOImpl();
+    MusicRowMapperDAOImpl musicRowMapperDAO = new MusicRowMapperDAOImpl();
+    MusicRowCallBackHandlerDAOImpl musicRowCallBackHandlerDAO = new MusicRowCallBackHandlerDAOImpl();
+    MusicResultSetExtractorDAOImpl musicResultSetExtractorDAO = new MusicResultSetExtractorDAOImpl();
 
     @Before
     public void setUp() {

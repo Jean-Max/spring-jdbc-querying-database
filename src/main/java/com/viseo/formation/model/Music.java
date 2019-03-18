@@ -1,4 +1,4 @@
-package com.viseo.model;
+package com.viseo.formation.model;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package com.viseo.dao.utils;
+package com.viseo.formation.dao.utils;
 
 public enum MusicTypes {
     ROCK,
