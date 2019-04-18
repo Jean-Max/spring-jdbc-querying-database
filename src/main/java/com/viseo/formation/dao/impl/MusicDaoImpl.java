@@ -1,12 +1,14 @@
 package com.viseo.formation.dao.impl;
 
-import com.viseo.formation.dao.MusicDao;
-import com.viseo.formation.dao.MusicResultSetExtractorDAO;
+import com.viseo.formation.dao.MusicGenericQueryDAO;
 import com.viseo.formation.dao.MusicRowCallBackHandlerDAO;
 import com.viseo.formation.dao.MusicRowMapperDAO;
-import com.viseo.formation.dao.impl.todo.MusicResultSetExtractorDAOImpl;
-import com.viseo.formation.dao.impl.todo.MusicRowCallBackHandlerDAOImpl;
-import com.viseo.formation.dao.impl.todo.MusicRowMapperDAOImpl;
+import com.viseo.formation.dao.MusicResultSetExtractorDAO;
+import com.viseo.formation.dao.MusicDao;
+import com.viseo.formation.dao.impl.complete.MusicGenericQueryDAOImpl;
+import com.viseo.formation.dao.impl.complete.MusicResultSetExtractorDAOImpl;
+import com.viseo.formation.dao.impl.complete.MusicRowCallBackHandlerDAOImpl;
+import com.viseo.formation.dao.impl.complete.MusicRowMapperDAOImpl;
 import com.viseo.formation.dao.utils.MusicDAOUtils;
 import com.viseo.formation.model.Music;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +22,10 @@ public class MusicDaoImpl implements MusicDao {
 
 	JdbcTemplate jdbcTemplate;
 
-	@Autowired
 	private MusicRowMapperDAO musicRowMapperDAO;
-
-	@Autowired
 	private MusicRowCallBackHandlerDAO musicRowCallBackHandlerDAO;
-
-	@Autowired
 	private MusicResultSetExtractorDAO musicResultSetExtractorDAO;
+	private MusicGenericQueryDAO musicGenericQueryDAO;
 
 	@Autowired
 	public void setMusicRowMapperDAO(MusicRowMapperDAOImpl musicRowMapperDAO){
@@ -42,6 +40,11 @@ public class MusicDaoImpl implements MusicDao {
 	@Autowired
 	public void setMusicRowCallBackHandlerDAO(MusicRowCallBackHandlerDAOImpl musicRowCallBackHandlerDAO) {
 		this.musicRowCallBackHandlerDAO = musicRowCallBackHandlerDAO;
+	}
+
+	@Autowired
+	public void setMusicGenericQueryDAO (MusicGenericQueryDAOImpl musicGenericQueryDAO) {
+		this.musicGenericQueryDAO = musicGenericQueryDAO;
 	}
 
 	@Autowired
@@ -62,6 +65,11 @@ public class MusicDaoImpl implements MusicDao {
 	@Override
 	public List<Music> findAllMusics() {
 		return musicResultSetExtractorDAO.findAllMusics(jdbcTemplate);
+	}
+
+	@Override
+	public String findCategory (String name) {
+		return musicGenericQueryDAO.findCategoryWithGenericQuery(name, jdbcTemplate);
 	}
 
 }

@@ -16,8 +16,8 @@ public class MusicRowMapperDAOImpl implements MusicRowMapperDAO {
     @Override
     public Music findByName(String id, JdbcTemplate jdbcTemplate) {
 //        return findByNameWithOuterClass(id, jdbcTemplate);
-        return findByNameWithInnerClass(id, jdbcTemplate);
-//        return findByNameWithLambda(id, jdbcTemplate);
+//        return findByNameWithInnerClass(id, jdbcTemplate);
+        return findByNameWithLambda(id, jdbcTemplate);
     }
 
     class MusicMapper implements RowMapper {
@@ -44,7 +44,7 @@ public class MusicRowMapperDAOImpl implements MusicRowMapperDAO {
 
     private Music findByNameWithLambda(String name, JdbcTemplate jdbcTemplate) {
         Music result = jdbcTemplate.queryForObject(
-                MusicDAOUtils.GET_MUSIC_BY_NAME, new Object[] {name},
+                MusicDAOUtils.GET_MUSIC_BY_NAME, new Object[]{name},
                 (rs, rowNum) -> {
                     return new Music(rs.getInt(MusicDAOUtils.COLUMN_ID), rs.getString(MusicDAOUtils.COLUMN_NAME), rs.getString(MusicDAOUtils.COLUMN_CATEGORY));
                 }

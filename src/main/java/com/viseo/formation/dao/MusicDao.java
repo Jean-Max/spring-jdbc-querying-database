@@ -11,4 +11,6 @@ public interface MusicDao {
 	List<Music> findAllMusics();
 
 	List<String> generateAllMusics ();
+
+	String findCategory (String name);
 }
