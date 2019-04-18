@@ -1,10 +1,10 @@
 package com.viseo.formation.dao;
 
 import com.viseo.formation.dao.impl.MusicDaoImpl;
-import com.viseo.formation.dao.impl.complete.MusicGenericQueryDAOImpl;
-import com.viseo.formation.dao.impl.complete.MusicResultSetExtractorDAOImpl;
-import com.viseo.formation.dao.impl.complete.MusicRowCallBackHandlerDAOImpl;
-import com.viseo.formation.dao.impl.complete.MusicRowMapperDAOImpl;
+import com.viseo.formation.dao.impl.todo.MusicGenericQueryDAOImpl;
+import com.viseo.formation.dao.impl.todo.MusicResultSetExtractorDAOImpl;
+import com.viseo.formation.dao.impl.todo.MusicRowCallBackHandlerDAOImpl;
+import com.viseo.formation.dao.impl.todo.MusicRowMapperDAOImpl;
 import com.viseo.formation.dao.utils.MusicDAOUtils;
 import com.viseo.formation.dao.utils.MusicTypes;
 import com.viseo.formation.model.Music;
